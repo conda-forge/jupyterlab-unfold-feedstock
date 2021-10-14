@@ -117,5 +117,6 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
+* [@jupyterlab-contrib-bot](https://github.com/jupyterlab-contrib-bot/)
 * [@martinRenou](https://github.com/martinRenou/)
 
