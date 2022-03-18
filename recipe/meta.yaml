@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-unfold" %}
-{% set version = "0.1.6" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/jupyterlab-contrib/jupyterlab-unfold/archive/{{ version }}.tar.gz
-  sha256: ccc7a70b14fe9ab07c3c05753be1bc10e94cdf7ac7b621b01cee89f558ee466b
+  sha256: c19db927dbf8f6c635d67342fb853fa26c0db170fbde719d3af2af670d79bd00
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -35,7 +35,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: 'An IDE-like file browser for JupyterLab'
+  summary: An IDE-like file browser for JupyterLab
   dev_url: https://github.com/jupyterlab-contrib/jupyterlab-unfold
 
 extra:
