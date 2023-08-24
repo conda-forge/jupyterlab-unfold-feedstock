@@ -1,11 +1,11 @@
-About jupyterlab-unfold
-=======================
+About jupyterlab-unfold-feedstock
+=================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab-unfold-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/jupyterlab-contrib/jupyterlab-unfold
 
 Package license: BSD-3-Clause
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab-unfold-feedstock/blob/main/LICENSE.txt)
 
 Summary: An IDE-like file browser for JupyterLab
 
