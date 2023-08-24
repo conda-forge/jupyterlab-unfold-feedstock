@@ -19,6 +19,8 @@ requirements:
     - python >=3.6
     - pip
     - yarn
+    - hatchling
+    - hatch-jupyter
     - jupyterlab >=4,<5
     - jupyter-packaging >=0.10,<2
   run:
