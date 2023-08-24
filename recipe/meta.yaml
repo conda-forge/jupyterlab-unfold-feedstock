@@ -1,13 +1,13 @@
 {% set name = "jupyterlab-unfold" %}
-{% set version = "0.2.2" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/jupyterlab-contrib/jupyterlab-unfold/archive/{{ version }}.tar.gz
-  sha256: 3ae42aacf0864300e1c3ea57b0747866eb3beb0f651db98708ea285a75236f9f
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_unfold-{{ version }}.tar.gz
+  sha256: 5c8b22f8557f1b0e83ce608d79ad21901acab337c0721e54c5741711e2a012bb
 
 build:
   noarch: python
@@ -19,11 +19,12 @@ requirements:
     - python >=3.6
     - pip
     - yarn
-    - jupyterlab >=3.0.0,<4
+    - jupyterlab >=4,<5
     - jupyter-packaging >=0.10,<2
   run:
     - python >=3.6
-    - jupyterlab >=3.0.0,<4
+  run_constrained:
+    - jupyterlab >=4,<5
 
 test:
   commands:
