@@ -6,17 +6,17 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_unfold-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_unfold-{{ version }}.tar.gz
   sha256: bb8cdf84295dfdadaf76b115251b6a3b5e34d40f6e53336ff4cd4b7e80951c09
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - yarn
     - hatchling
@@ -25,11 +25,13 @@ requirements:
     - jupyterlab >=4,<5
     - jupyter-packaging >=0.10,<2
   run:
-    - python >=3.6
+    - python >={{ python_min }}
   run_constrained:
     - jupyterlab >=4,<5
 
 test:
+  requires:
+    - python {{ python_min }}
   commands:
     - test -f ${PREFIX}/share/jupyter/labextensions/jupyterlab-unfold/package.json                            # [unix]
     - if not exist %PREFIX%\\share\\jupyter\\labextensions\\jupyterlab-unfold\\package.json (exit 1)          # [win]
