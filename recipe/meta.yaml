@@ -1,5 +1,5 @@
 {% set name = "jupyterlab-unfold" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/jupyterlab_unfold-{{ version }}.tar.gz
-  sha256: bb8cdf84295dfdadaf76b115251b6a3b5e34d40f6e53336ff4cd4b7e80951c09
+  sha256: 4573debbb07b77fcb17a2663025fa02a3d7b0f19965b27c2d73c36fcbe969147
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
